@@ -65,20 +65,26 @@
     </section>
     <!-- Services-->
     <section class="page-section" id="services">
-
-        <div class="table-wrapper-scroll-y my-custom-scrollbar">
-            <table class="table table-striped table-bordered table-sm-l col-6" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Country</th>
-                    </tr>
-                </thead>
-                <tbody id="data">
-                </tbody>
-            </table>
-
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <h2 class="text-center">Country</h2>
+            <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                <table class="table" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th scope="col fixed-top">#</th>
+                            <th scope="col">Country</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data">
+                    </tbody>
+                </table>
+    
+            </div>
         </div>
+        </div>
+        
     </section>
     <!-- Portfolio-->
     <section id="portfolio">
@@ -142,10 +148,190 @@
         </div>
     </section>
     <!-- Call to action-->
-    <section class="page-section bg-dark text-white">
-        <div class="container text-center">
-            <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-            <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
+    <section class="page-section bg-dark text-white" id="contact">
+        <div class="container">
+            <h1 class="mb-4  text-center">Screening questionnare covid-19</h1>
+            <p class="mb-4  text-center">Screening questionnare covid-19</p><br>
+            <div class="container">
+                <form action="#">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="text" placeholder="Name">
+                                        <div class="valid-feedback">
+                                            Success!!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sername">Sername</label>
+                                        <input type="text" class="form-control" id="text" placeholder="Sername">
+                                        <div class="valid-feedback">
+                                            Success!!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-group">
+                                    <label for="ID">Nation ID</label>
+                                    <input type="text" class="form-control" id="text" placeholder="Nation ID">
+                                    <div class="valid-feedback">
+                                        Success!!
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-group">
+                                    <label for="phone">Mobile Phone</label>
+                                    <input type="text" class="form-control" id="text" placeholder="Phone number">
+                                    <div class="valid-feedback">
+                                        Success!!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">Gender </div>
+                                <div class="col-1">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="gender" id="gender"
+                                            value="checkedValue">
+                                        Man
+                                    </label>
+                                </div>
+                                <div class="col-1">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="gender" id="gender"
+                                            value="checkedValue">
+                                        Woman
+                                    </label>
+                                </div>
+                            </div><br><br>
+
+                            <h5>1. Do you currently have any of the following symptoms? Tick all that apply</h5><br>
+                            <div class="row">
+                                <div class="col-10"><h5>- Cough/ Sore Throat</h5></div>
+                                <div class="col-2">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            Yes
+                                            <input type="radio" name="q1.1" id="q1.1" autocomplete="off">
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            No
+                                            <input type="radio" name="q1.1" id="q1.1" autocomplete="off">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-10"><h5>- Runny Nose</h5></div>
+                                <div class="col-2">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            Yes
+                                            <input type="radio" name="q1.2" id="q1.2" autocomplete="off">
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            No
+                                            <input type="radio" name="q1.2" id="q1.2" autocomplete="off">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-10"><h5>- Shortness of Breath / Difficulty breathing</h5></div>
+                                <div class="col-2">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            Yes
+                                            <input type="radio" name="q1.3" id="q1.3" autocomplete="off">
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            No
+                                            <input type="radio" name="q1.3" id="q1.3" autocomplete="off">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-10"><h5>- Do you have any existing condition which weakens your immune system?</h5></div>
+                                <div class="col-2">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            Yes
+                                            <input type="radio" name="q1.4" id="q1.4" autocomplete="off">
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            No
+                                            <input type="radio" name="q1.4" id="q1.4" autocomplete="off">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><br><br>
+
+                            <h5>2. During last 14 days, have you travelled from or transited in any country below? Please specify</h5><br>
+                            
+                                <div class="row col-12" data-toggle="buttons">
+                                    <div class="col-1"></div>
+                                    <label class="btn btn-primary active col-3">
+                                        <input type="checkbox" name="country-1" id="country-1" autocomplete="off">
+                                        China
+                                    </label>
+                                    <div class="col-1"></div>
+                                    <label class="btn btn-primary col-3">
+                                        <input type="checkbox" name="country-2" id="country-2" autocomplete="off">
+                                        Macao
+                                    </label>
+                                    <div class="col-1"></div>
+                                    <label class="btn btn-primary col-3">
+                                        <input type="checkbox" name="country-3" id="country-3" autocomplete="off">
+                                        Hong Kong
+                                    </label>
+                                </div><br>
+                                <div class="row col-12" data-toggle="buttons">
+                                    <div class="col-1"></div>
+                                    <label class="btn btn-primary active col-3">
+                                        <input type="checkbox" name="country-4" id="country-4" autocomplete="off">
+                                        Soft Korea
+                                    </label>
+                                    <div class="col-1"></div>
+                                    <label class="btn btn-primary col-3">
+                                        <input type="checkbox" name="country-5" id="country-5" autocomplete="off">
+                                        Italy
+                                    </label>
+                                    <div class="col-1"></div>
+                                    <label class="btn btn-primary col-3">
+                                        <input type="checkbox" name="country-6" id="country-6" autocomplete="off">
+                                        Iran
+                                    </label>
+                                </div><br><br>
+                                
+                                <div class="row">
+                                    <div class="col-9"><h5>3. During last 14 days, have you close contact those who came back from the area addected by the outbreaks of COVID-19 or history of close confirmed case of COVID-19 infection?</h5></div>
+                                    <div class="col-3">
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-primary active">
+                                                Yes
+                                                <input type="radio" name="q3" id="q3" autocomplete="off">
+                                            </label>
+                                            <label class="btn btn-primary">
+                                                No
+                                                <input type="radio" name="q3" id="q3" autocomplete="off">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div><br>
+
+                        </div>
+
+                        <button class="btn btn-outline-secondary" typr="submit">Submit</button>
+                </form>
+            </div>
+
         </div>
     </section>
     <!-- Contact-->

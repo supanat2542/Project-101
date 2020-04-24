@@ -22,7 +22,7 @@
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
-  --gray: #6c757d;
+  --gray: #050505;
   --gray-dark: #343a40;
   --primary: #f4623a;
   --secondary: #6c757d;
@@ -10152,6 +10152,12 @@ header.masthead h1 {
       border-radius: 15px;
       background: #dc3545;
       padding: 20px;
-      width: 200px;
-      height: 150px;
+    }
+    #rcorners2 {
+      border-radius: 15px;
+      background: #f8f9fa;
+      padding: 20px;
+    }
+    #op {
+      margin : 5px;
     }

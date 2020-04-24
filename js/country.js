@@ -25,6 +25,18 @@ $(function(){
           $("#data").append(row);
 
         }
+
+        var row1 = `<div >${selectedCountry[selectedCountry.length-1].confirmed}</div>`
+
+        $("#confirmed").append(row1);
+
+        var row2 = `<div >${selectedCountry[selectedCountry.length-1].deaths}</div>`
+
+        $("#death").append(row2);
+
+        var row3 = `<div >${selectedCountry[selectedCountry.length-1].recovered}</div>`
+
+        $("#recovered").append(row3);
         
 
     });
@@ -45,14 +57,14 @@ window.onload = function () {
             {
                 type: "spline", //change it to line, area, column, pie, etc
                 dataPoints: [
-                    // { label: "2017-08-09", y: 85.14 },
-                    // { label: "2017-08-01", y: 85.83 },
-                    // { label: "2017-08-04", y: 84.42 },
-                    // { label: "2017-08-05", y: 84.97 },
-                    // { label: "2017-08-06", y: 84.89 },
-                    // { label: "2017-08-07", y: 84.78 },
-                    // { label: "2017-08-08", y: 85.09 },
-                    // { label: "2017-08-09", y: 85.14 },
+                    { label: "2017-08-09", y: 85.14 },
+                    { label: "2017-08-01", y: 85.83 },
+                    { label: "2017-08-04", y: 84.42 },
+                    { label: "2017-08-05", y: 84.97 },
+                    { label: "2017-08-06", y: 84.89 },
+                    { label: "2017-08-07", y: 84.78 },
+                    { label: "2017-08-08", y: 85.09 },
+                    { label: "2017-08-09", y: 85.14 }
                 ]
             }
         ]

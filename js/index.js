@@ -6,6 +6,8 @@ $(function () {
 
         var no = 1;
         for (var country in result) {
+          var selectedCountry = result[country];
+          console.log(selectedCountry);
 
             var row = `<tr>
                         <th scope="row">${no}</th>
@@ -16,8 +18,23 @@ $(function () {
 
             $("#data").append(row);
             no++;
+          if(no==selectedCountry.length){
+           var row1 = `<div >${selectedCountry[selectedCountry.length-1].confirmed}</div>`
+
+           $("#confirmed").append(row1);
+
+            var row2 = `<div >${selectedCountry[selectedCountry.length-1].deaths}</div>`
+
+            $("#death").append(row2);
+
+            var row3 = `<div >${selectedCountry[selectedCountry.length-1].recovered}</div>`
+
+           $("#recovered").append(row3);
+          }
 
         }
+
+        
 
     });
 

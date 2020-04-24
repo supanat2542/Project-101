@@ -24,6 +24,8 @@ $(function(){
 
           $("#data").append(row);
 
+          
+
         }
 
         var row1 = `<div >${selectedCountry[selectedCountry.length-1].confirmed}</div>`
@@ -38,37 +40,33 @@ $(function(){
 
         $("#recovered").append(row3);
         
+        var options = {
+            title: {
+                text: "Spline Chart with Export as Image"
+            },
+            animationEnabled: true,
+            exportEnabled: true,
+            data: [
+                {
+                    type: "spline", //change it to line, area, column, pie, etc
+                    dataPoints: [
+                        { label: "2017-08-09", y: 85.14 },
+                        { label: "2017-08-01", y: 85.83 },
+                        { label: "2017-08-04", y: 84.42 },
+                        { label: "2017-08-05", y: 84.97 },
+                        { label: "2017-08-06", y: 84.89 },
+                        { label: "2017-08-07", y: 84.78 },
+                        { label: "2017-08-08", y: 85.09 },
+                        { label: "2017-08-09", y: 85.14 }
+                    ]
+                }
+            ]
+        };
+        $("#chartContainer").CanvasJSChart(options);
 
     });
+    
 
 
 
 })
-window.onload = function () {
-
-    //Better to construct options first and then pass it as a parameter
-    var options = {
-        title: {
-            text: "Spline Chart with Export as Image"
-        },
-        animationEnabled: true,
-        exportEnabled: true,
-        data: [
-            {
-                type: "spline", //change it to line, area, column, pie, etc
-                dataPoints: [
-                    { label: "2017-08-09", y: 85.14 },
-                    { label: "2017-08-01", y: 85.83 },
-                    { label: "2017-08-04", y: 84.42 },
-                    { label: "2017-08-05", y: 84.97 },
-                    { label: "2017-08-06", y: 84.89 },
-                    { label: "2017-08-07", y: 84.78 },
-                    { label: "2017-08-08", y: 85.09 },
-                    { label: "2017-08-09", y: 85.14 }
-                ]
-            }
-        ]
-    };
-    $("#chartContainer").CanvasJSChart(options);
-
-}

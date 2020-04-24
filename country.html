@@ -48,8 +48,11 @@
         </div>
     </header>
     <!-- Services-->
-    <section class="page-section" id="services">
-
+    <section class="row page-section" id="services">
+        <h1 class="col-12 text-center" id="country"></h1>
+        <div class="col-6">
+            <div id="chartContainer" style="height: 600px;"></div>
+        </div>
         <div class="table-wrapper-scroll-y my-custom-scrollbar col-6">
             <table class="table table-hover">
                 <thead>
@@ -181,6 +184,8 @@
             $('.dataTables_length').addClass('bs-select');
         });
     </script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
     <script src="js/country.js"></script>
     <script src="js/scripts.js"></script>
 </body>

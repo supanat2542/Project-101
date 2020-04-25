@@ -12,20 +12,64 @@ $(function(){
 
         var selectedCountry = result[country];
         console.log(selectedCountry);
-        var data = [];
+        var dataa = [];
+        var con = 0;
+        var death = 0;
+        var reco =0;
+        var con1 = 0;
+        var death1 = 0;
+        var reco1 =0;
         for(var i=0;i<selectedCountry.length;i++){
            
             var row = `<tr>
-            <th scope="row">${selectedCountry[i].date}</th>
+            <th class="text-white">${selectedCountry[i].date}</th>
             <td>${selectedCountry[i].confirmed}</td>
             <td>${selectedCountry[i].deaths}</td>
             <td>${selectedCountry[i].recovered}</td>
           </tr>`
         
-          data.push({date:`${selectedCountry[i].date}`,value:`${selectedCountry[i].confirmed}`});
+          dataa.push({date:`${selectedCountry[i].date}`,value:`${selectedCountry[i].confirmed}`});
           $("#data").append(row);
+          
+
+          if(i==selectedCountry.length-1){
+
+            con=selectedCountry[selectedCountry.length-1].confirmed;
+            death=selectedCountry[selectedCountry.length-1].deaths;
+            reco=selectedCountry[selectedCountry.length-1].recovered;
+            con1=(selectedCountry[selectedCountry.length-1].confirmed-selectedCountry[selectedCountry.length-2].confirmed);
+            death1=(selectedCountry[selectedCountry.length-1].deaths-selectedCountry[selectedCountry.length-2].deaths);
+            reco1=(selectedCountry[selectedCountry.length-1].recovered-selectedCountry[selectedCountry.length-2].recovered);
+
+
+            var row1 = `<div >${con}</div>`
+ 
+            $("#confirmed").append(row1);
+ 
+             var row2 = `<div >${death}</div>`
+ 
+             $("#death").append(row2);
+ 
+             var row3 = `<div >${reco}</div>`
+ 
+            $("#recovered").append(row3);
+ 
+            var row11 = `<div >${con1}</div>`
+ 
+            $("#confirmed1").append(row11);
+ 
+             var row22 = `<div >${death1}</div>`
+ 
+             $("#death1").append(row22);
+ 
+             var row33 = `<div >${reco1}</div>`
+ 
+            $("#recovered1").append(row33);
+ 
+ 
+           }
         }
-        console.log(data)
+        console.log(dataa)
         
          // Themes begin
       am4core.useTheme(am4themes_animated);
@@ -33,7 +77,7 @@ $(function(){
       
       var chart = am4core.create("chartdiv", am4charts.XYChart);
       
-      chart.data = data;
+      chart.data = dataa;
       
       // Create axes
       var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
@@ -59,7 +103,7 @@ $(function(){
     });
 
      
-    
+   
     
 
 

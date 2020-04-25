@@ -20,7 +20,7 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    
+
 </head>
 
 <body id="page-top">
@@ -33,9 +33,10 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">TABLE</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">PIC</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">SYNLY</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#update">Update</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#table">Table</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Picture</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">AboutY</a></li>
                 </ul>
             </div>
         </div>
@@ -49,51 +50,84 @@
         </div>
     </header>
     <!-- About-->
-    <section class="page-section bg-primary" id="about">
+    <section class="page-section bg-primary" id="update">
         <div class="container row col-12">
             <div class="col-1"></div>
-            <div class="card text-white col-3" id="rcorners1">
+            <div class="card text-white col-md-12 col-lg-3" id="rcorners1">
                 <div class="card-body">
-                    <h4 class="card-title"> Confirmed </h4>
-                    <div class="card-text" id="confirmed"></div>
+                    <h3 class="card-title text-center"> Confirmed </h3>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-md-12 col-lg-4 text-center" id="op">
+                            <div class="card-text" id="confirmed"></div>
+                        </div>
+                        <div class="card-body" id="rcorners2">
+                            <div class="col-md-12 col-lg-8 text-center">
+                                <div class="card-text  text-dark" id="confirmed1"></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="col-1"></div>
-            <div class="card text-white col-3 " id="rcorners1">
+            <div class="card text-white col-md-12 col-lg-3" id="rcorners1">
                 <div class="card-body">
-                    <h4 class="card-title"> Deaths </h4>
-                    <div class="card-text" id="death"></div>
+                    <h3 class="card-title text-center"> Deaths </h3>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-md-12 col-lg-4 text-center" id="op">
+                            <div class="card-text" id="death"></div>
+                        </div>
+                        <div class="card-body" id="rcorners2">
+                            <div class="col-md-12 col-lg-8 text-center">
+                                <div class="card-text  text-dark" id="death1"></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="col-1"></div>
-            <div class="card text-white col-3" id="rcorners1">
+            <div class="card text-white col-md-12 col-lg-3" id="rcorners1">
                 <div class="card-body">
-                    <h4 class="card-title"> Recovered </h4>
-                    <div class="card-text" id="recovered"></div>
+                    <h3 class="card-title text-center"> Recovered </h3>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-md-12 col-lg-3 text-center" id="op">
+                            <div class="card-text" id="recovered"></div>
+                        </div>
+                        <div class="card-body" id="rcorners2">
+                            <div class="col-md-12 col-lg-8 text-center">
+                                <div class="card-text  text-dark" id="recovered1"></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Services-->
-    <section class="row page-section" id="tacles">
+    <section class="row page-section" id="table">
         <h1 class="col-12 text-center" id="country"></h1>
-        <div class="col-6">
+        <div class="col-md-12 col-lg-6">
             <div id="chartdiv"></div>
         </div>
-        <div class="table-wrapper-scroll-y my-custom-scrollbar col-6">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar col-md-12 col-lg-6 tableFixHead">
             <table class="table table-hover">
                 <thead>
-                  <tr>
-                    <th scope="col">Date</th>
-                    <th scope="col">Confirmed</th>
-                    <th scope="col">Deaths</th>
-                    <th scope="col">Recovered</th>
-                  </tr>
+                    <tr class="text-white">
+                        <th scope="col">Date</th>
+                        <th scope="col">Confirmed</th>
+                        <th scope="col">Deaths</th>
+                        <th scope="col">Recovered</th>
+                    </tr>
                 </thead>
                 <tbody id="data">
-                  
+
                 </tbody>
-              </table>
+            </table>
             </table>
 
         </div>
@@ -160,7 +194,7 @@
         </div>
     </section>
     <!-- Contact-->
-    <section class="page-section" id="contact">
+    <section class="page-section" id="about">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -199,8 +233,8 @@
     <script src="js/country.js"></script>
     <script src="js/scripts.js"></script>
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
-<script src="https://www.amcharts.com/lib/4/charts.js"></script>
-<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 </body>
 
 </html>

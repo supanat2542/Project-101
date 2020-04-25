@@ -15,9 +15,9 @@ $(function () {
           var selectedCountry = result[country];
           console.log(selectedCountry);
             var row = `<tr>
-                        <th scope="row">${no}</th>
+                        <th scope="row" class="text-white">${no}</th>
                         <td>
-                        <a href="country.html?country=${country}">${country}</a>
+                        <a>${country}</a>
                         </td>
                         <td>
                         <a>${selectedCountry[selectedCountry.length-1].confirmed}</a>
@@ -27,6 +27,9 @@ $(function () {
                         </td>
                         <td>
                         <a>${selectedCountry[selectedCountry.length-1].recovered}</a>
+                        </td>
+                        <td>
+                        <button type="button" class="btn btn-outline-danger" ><a href="country.html?country=${country}">Detail</a></button>
                         </td>
                     </tr>`;
 
@@ -43,27 +46,27 @@ $(function () {
 
             
 
-           var row1 = `<div >${con}</div>`
+           var row1 = `<div class="row">${con} คน</div>`
 
            $("#confirmed").append(row1);
 
-            var row2 = `<div >${death}</div>`
+            var row2 = `<div class="row">${death} คน</div>`
 
             $("#death").append(row2);
 
-            var row3 = `<div >${reco}</div>`
+            var row3 = `<div class="row">${reco} คน</div>`
 
            $("#recovered").append(row3);
 
-           var row11 = `<div >${con1}</div>`
+           var row11 = `<div class="row">เพิ่มขึ้น${con1} คน</div>`
 
            $("#confirmed1").append(row11);
 
-            var row22 = `<div >${death1}</div>`
+            var row22 = `<div class="row">เพิ่มขึ้น ${death1} คน</div>`
 
             $("#death1").append(row22);
 
-            var row33 = `<div >${reco1}</div>`
+            var row33 = `<div class="row">เพิ่มขึ้น ${reco1} คน</div>`
 
            $("#recovered1").append(row33);
 

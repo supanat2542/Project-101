@@ -52,15 +52,16 @@
     <section class="page-section bg-primary" id="about">
         <div class="container row col-12">
             <div class="col-1"></div>
-            <div class="card text-white col-3" id="rcorners1">
+            <div class="card text-white col-md-12 col-lg-3" id="rcorners1">
                 <div class="card-body">
                     <h3 class="card-title text-center"> Confirmed </h3>
                     <div class="row">
-                        <div class="col-6 text-center" id="op">
+                        <div class="col-1"></div>
+                        <div class="col-md-12 col-lg-4 text-center" id="op">
                             <div class="card-text" id="confirmed"></div>
                         </div>
                         <div class="card-body" id="rcorners2">
-                            <div class="col-6 text-center">
+                            <div class="col-md-12 col-lg-8 text-center">
                                 <div class="card-text  text-dark" id="confirmed1"></div>
                             </div>
                         </div>
@@ -69,15 +70,16 @@
                 </div>
             </div>
             <div class="col-1"></div>
-            <div class="card text-white col-3" id="rcorners1">
+            <div class="card text-white col-md-12 col-lg-3" id="rcorners1">
                 <div class="card-body">
                     <h3 class="card-title text-center"> Deaths </h3>
                     <div class="row">
-                        <div class="col-6 text-center" id="op">
+                        <div class="col-1"></div>
+                        <div class="col-md-12 col-lg-4 text-center" id="op">
                             <div class="card-text" id="death"></div>
                         </div>
                         <div class="card-body" id="rcorners2">
-                            <div class="col-6 text-center">
+                            <div class="col-md-12 col-lg-8 text-center">
                                 <div class="card-text  text-dark" id="death1"></div>
                             </div>
                         </div>
@@ -86,15 +88,16 @@
                 </div>
             </div>
             <div class="col-1"></div>
-            <div class="card text-white col-3" id="rcorners1">
+            <div class="card text-white col-md-12 col-lg-3" id="rcorners1">
                 <div class="card-body">
                     <h3 class="card-title text-center"> Recovered </h3>
                     <div class="row">
-                        <div class="col-6 text-center" id="op">
+                        <div class="col-1"></div>
+                        <div class="col-md-12 col-lg-3 text-center" id="op">
                             <div class="card-text" id="recovered"></div>
                         </div>
                         <div class="card-body" id="rcorners2">
-                            <div class="col-6 text-center">
+                            <div class="col-md-12 col-lg-8 text-center">
                                 <div class="card-text  text-dark" id="recovered1"></div>
                             </div>
                         </div>
@@ -108,10 +111,10 @@
     <section class="page-section" id="services">
         <div class="container col-12">
             <h2 class="text-center">Country</h2>
-            <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                <table class="table" cellspacing="0" width="100%">
+            <div class="table-wrapper-scroll-y my-custom-scrollbar tableFixHead">
+                <table class="table text-center" cellspacing="0" width="50%">
                     <thead>
-                        <tr>
+                        <tr class="text-white">
                             <th scope="col-1 fixed-top">#</th>
                             <th scope="col-3">Country</th>
                             <th scope="col-2">Confirmed</th>
@@ -234,15 +237,15 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-2">Gender </div>
-                            <div class="col-1">
+                            <div class="col-md-12 col-lg-2">Gender </div>
+                            <div class="col-md-12 col-lg-1">
                                 <label class="form-check-label">
                                     <input type="radio" class="form-check-input" name="gender" id="gender"
                                         value="checkedValue">
                                     Man
                                 </label>
                             </div>
-                            <div class="col-1">
+                            <div class="col-md-12 col-lg-1">
                                 <label class="form-check-label">
                                     <input type="radio" class="form-check-input" name="gender" id="gender"
                                         value="checkedValue">
@@ -256,7 +259,7 @@
                             <div class="col-10">
                                 <h5>- Cough/ Sore Throat</h5>
                             </div>
-                            <div class="col-2">
+                            <div class="col-md-12 col-lg-2">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-primary active">
                                         Yes
@@ -273,7 +276,7 @@
                             <div class="col-10">
                                 <h5>- Runny Nose</h5>
                             </div>
-                            <div class="col-2">
+                            <div class="col-md-12 col-lg-2">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-primary active">
                                         Yes
@@ -290,7 +293,7 @@
                             <div class="col-10">
                                 <h5>- Shortness of Breath / Difficulty breathing</h5>
                             </div>
-                            <div class="col-2">
+                            <div class="col-md-12 col-lg-2">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-primary active">
                                         Yes
@@ -307,7 +310,7 @@
                             <div class="col-10">
                                 <h5>- Do you have any existing condition which weakens your immune system?</h5>
                             </div>
-                            <div class="col-2">
+                            <div class="col-md-12 col-lg-2">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-primary active">
                                         Yes
@@ -326,34 +329,34 @@
 
                         <div class="row col-12" data-toggle="buttons">
                             <div class="col-1"></div>
-                            <label class="btn btn-primary active col-3">
+                            <label class="btn btn-primary active col-md-12 col-lg-3">
                                 <input type="checkbox" name="country-1" id="country-1" autocomplete="off">
                                 China
                             </label>
                             <div class="col-1"></div>
-                            <label class="btn btn-primary col-3">
+                            <label class="btn btn-primary col-md-12 col-lg-3">
                                 <input type="checkbox" name="country-2" id="country-2" autocomplete="off">
                                 Macao
                             </label>
                             <div class="col-1"></div>
-                            <label class="btn btn-primary col-3">
+                            <label class="btn btn-primary col-md-12 col-lg-3">
                                 <input type="checkbox" name="country-3" id="country-3" autocomplete="off">
                                 Hong Kong
                             </label>
                         </div><br>
                         <div class="row col-12" data-toggle="buttons">
                             <div class="col-1"></div>
-                            <label class="btn btn-primary active col-3">
+                            <label class="btn btn-primary active col-md-12 col-lg-3">
                                 <input type="checkbox" name="country-4" id="country-4" autocomplete="off">
                                 Soft Korea
                             </label>
                             <div class="col-1"></div>
-                            <label class="btn btn-primary col-3">
+                            <label class="btn btn-primary col-md-12 col-lg-3">
                                 <input type="checkbox" name="country-5" id="country-5" autocomplete="off">
                                 Italy
                             </label>
                             <div class="col-1"></div>
-                            <label class="btn btn-primary col-3">
+                            <label class="btn btn-primary col-md-12 col-lg-3">
                                 <input type="checkbox" name="country-6" id="country-6" autocomplete="off">
                                 Iran
                             </label>
@@ -365,7 +368,7 @@
                                     addected by the outbreaks of COVID-19 or history of close confirmed case of COVID-19
                                     infection?</h5>
                             </div>
-                            <div class="col-3">
+                            <div class="col-md-12 col-lg-3">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-primary active">
                                         Yes

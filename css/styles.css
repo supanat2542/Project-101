@@ -10164,6 +10164,9 @@ header.masthead h1 {
     #chartdiv {
       height: 500px;
     }
-    #tacles{
-      background-color: #30303d;
-    }
+    .tableFixHead          { overflow-y: auto; height: 600px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+table  { border-collapse: collapse; width: 100%; }
+th { padding: 8px 16px; }
+th     { background:#343a40; }
+    

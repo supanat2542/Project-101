@@ -14,11 +14,19 @@ $(function () {
         for (var country in result) {
           var selectedCountry = result[country];
           console.log(selectedCountry);
-
             var row = `<tr>
                         <th scope="row">${no}</th>
                         <td>
                         <a href="country.html?country=${country}">${country}</a>
+                        </td>
+                        <td>
+                        <a>${selectedCountry[selectedCountry.length-1].confirmed}</a>
+                        </td>
+                        <td>
+                        <a>${selectedCountry[selectedCountry.length-1].deaths}</a>
+                        </td>
+                        <td>
+                        <a>${selectedCountry[selectedCountry.length-1].recovered}</a>
                         </td>
                     </tr>`;
 

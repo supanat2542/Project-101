@@ -20,6 +20,7 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    
 </head>
 
 <body id="page-top">
@@ -74,10 +75,10 @@
         </div>
     </section>
     <!-- Services-->
-    <section class="row page-section" id="services">
+    <section class="row page-section" id="tacles">
         <h1 class="col-12 text-center" id="country"></h1>
         <div class="col-6">
-            <div id="chartContainer" style="height: 600px;"></div>
+            <div id="chartdiv"></div>
         </div>
         <div class="table-wrapper-scroll-y my-custom-scrollbar col-6">
             <table class="table table-hover">
@@ -195,18 +196,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <!-- Core theme JS-->
-    <script>
-        $(document).ready(function () {
-            $('#dtHorizontalExample').DataTable({
-                "scrollX": true
-            });
-            $('.dataTables_length').addClass('bs-select');
-        });
-    </script>
-    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
     <script src="js/country.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 </body>
 
 </html>

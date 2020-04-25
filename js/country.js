@@ -12,7 +12,7 @@ $(function(){
 
         var selectedCountry = result[country];
         console.log(selectedCountry);
-
+        var data = [];
         for(var i=0;i<selectedCountry.length;i++){
            
             var row = `<tr>
@@ -21,50 +21,45 @@ $(function(){
             <td>${selectedCountry[i].deaths}</td>
             <td>${selectedCountry[i].recovered}</td>
           </tr>`
-
-          $("#data").append(row);
-
-          
-
-        }
-
-        var row1 = `<div >${selectedCountry[selectedCountry.length-1].confirmed}</div>`
-
-        $("#confirmed").append(row1);
-
-        var row2 = `<div >${selectedCountry[selectedCountry.length-1].deaths}</div>`
-
-        $("#death").append(row2);
-
-        var row3 = `<div >${selectedCountry[selectedCountry.length-1].recovered}</div>`
-
-        $("#recovered").append(row3);
         
-        var options = {
-            title: {
-                text: "Spline Chart with Export as Image"
-            },
-            animationEnabled: true,
-            exportEnabled: true,
-            data: [
-                {
-                    type: "spline", //change it to line, area, column, pie, etc
-                    dataPoints: [
-                        { label: "2017-08-09", y: 85.14 },
-                        { label: "2017-08-01", y: 85.83 },
-                        { label: "2017-08-04", y: 84.42 },
-                        { label: "2017-08-05", y: 84.97 },
-                        { label: "2017-08-06", y: 84.89 },
-                        { label: "2017-08-07", y: 84.78 },
-                        { label: "2017-08-08", y: 85.09 },
-                        { label: "2017-08-09", y: 85.14 }
-                    ]
-                }
-            ]
-        };
-        $("#chartContainer").CanvasJSChart(options);
-
+          data.push({date:`${selectedCountry[i].date}`,value:`${selectedCountry[i].confirmed}`});
+          $("#data").append(row);
+        }
+        console.log(data)
+        
+         // Themes begin
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+      
+      var chart = am4core.create("chartdiv", am4charts.XYChart);
+      
+      chart.data = data;
+      
+      // Create axes
+      var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+      dateAxis.renderer.minGridDistance = 60;
+      
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+      
+      // Create series
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "value";
+      series.dataFields.dateX = "date";
+      series.tooltipText = "{value}"
+      
+      series.tooltip.pointerOrientation = "vertical";
+      
+      chart.cursor = new am4charts.XYCursor();
+      chart.cursor.snapToSeries = series;
+      chart.cursor.xAxis = dateAxis;
+      
+      //chart.scrollbarY = new am4core.Scrollbar();
+      chart.scrollbarX = new am4core.Scrollbar();
+      
     });
+
+     
+    
     
 
 

@@ -28,7 +28,7 @@ $(function(){
             <td>${selectedCountry[i].recovered}</td>
           </tr>`
         
-          dataa.push({date:`${selectedCountry[i].date}`,value:`${selectedCountry[i].confirmed}`});
+          dataa.push({date:`${selectedCountry[i].date}`,value:`${selectedCountry[i].confirmed}`,value1:`${selectedCountry[i].deaths}`,value2:`${selectedCountry[i].recovered}`});
           $("#data").append(row);
           
 
@@ -89,12 +89,24 @@ $(function(){
       var series = chart.series.push(new am4charts.LineSeries());
       series.dataFields.valueY = "value";
       series.dataFields.dateX = "date";
-      series.tooltipText = "{value}"
+      series.tooltipText = "Confirmed {value}"
+      var series1 = chart.series.push(new am4charts.LineSeries());
+      series1.dataFields.valueY = "value1";
+      series1.dataFields.dateX = "date";
+      series1.tooltipText = "Deaths {value1}"
+      var series2 = chart.series.push(new am4charts.LineSeries());
+      series2.dataFields.valueY = "value2";
+      series2.dataFields.dateX = "date";
+      series2.tooltipText = "Recovered {value2}"
       
       series.tooltip.pointerOrientation = "vertical";
+      series1.tooltip.pointerOrientation = "vertical";
+      series2.tooltip.pointerOrientation = "vertical";
       
       chart.cursor = new am4charts.XYCursor();
       chart.cursor.snapToSeries = series;
+      chart.cursor.snapToSeries1 = series1;
+      chart.cursor.snapToSeries2 = series2;
       chart.cursor.xAxis = dateAxis;
       
       //chart.scrollbarY = new am4core.Scrollbar();

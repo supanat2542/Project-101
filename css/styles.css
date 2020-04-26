@@ -10152,21 +10152,30 @@ header.masthead h1 {
       border-radius: 15px;
       background: #dc3545;
       padding: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-top: 20px;
+      margin-bottom: 40px;
     }
     #rcorners2 {
       border-radius: 15px;
       background: #f8f9fa;
       padding: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+    
     #op {
       margin : 5px;
     }
     #chartdiv {
-      height: 500px;
+      height: 600px;
     }
     .tableFixHead          { overflow-y: auto; height: 600px; }
 .tableFixHead thead th { position: sticky; top: 0; }
 table  { border-collapse: collapse; width: 100%; }
 th { padding: 8px 16px; }
 th     { background:#343a40; }
-    
+    .abo{
+      width: 30%;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
